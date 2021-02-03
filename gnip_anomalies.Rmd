@@ -1,0 +1,19 @@
+---
+title: "gnip_anomalies"
+author: "Zack Grzywacz"
+date: "February 3, 2021"
+output: html_document
+---
+
+```{r}
+cg_DJF <- read.csv("CG_DJF_means.csv")
+```
+
+```{r}
+summer_mean <- mean(cg_DJF$DJF_Mean)
+```
+
+```{r}
+cg_DJF$anom <- (cg_DJF$DJF_Mean - summer_mean)
+```
+
